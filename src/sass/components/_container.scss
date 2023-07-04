@@ -1,0 +1,10 @@
+@use "../abstracts/colors" as a;
+@use "../base/typography" as t;
+.container {
+  padding: 2rem 0;
+  max-width: 90rem;
+  margin-inline: auto;
+  background-color: a.$background-color;
+  color: a.$secondary-color;
+  font-family: t.$primary-font-family;
+}

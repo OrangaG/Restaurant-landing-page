@@ -1,0 +1,40 @@
+@use "../base/typography" as t;
+@use "../abstracts/colors" as a;
+
+.nav {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  font-weight: 500;
+  z-index: 10;
+}
+
+.nav__logo {
+  font-size: t.$font-size-2xl;
+}
+
+.nav__links {
+  display: flex;
+  gap: 2.625rem;
+  z-index: inherit;
+}
+
+li {
+  a {
+    &:visited,
+    &:focus {
+      color: a.$secondary-color;
+    }
+
+    &:hover,
+    &:active {
+      color: a.$primary-color;
+    }
+  }
+}
+
+.nav__icons {
+  z-index: inherit;
+  display: flex;
+  gap: 1.625rem;
+}

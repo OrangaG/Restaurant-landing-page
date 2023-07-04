@@ -2,24 +2,28 @@
 <html lang="en">
   <head>
     <meta charset="UTF-8" />
-    <link rel="icon" type="image/svg+xml" href="/vite.svg" />
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Abhaya+Libre:wght@800&family=Poppins:wght@400;500;700&display=swap"
+      rel="stylesheet"
+    />
+    <link rel="stylesheet" href="./src/sass/styles.scss" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Yannal</title>
   </head>
   <body>
     <div class="container">
-      <header class="hero">
+      <header>
         <!-- Navbar -->
-        <nav class="hero__nav">
-          <span class="hero__logo">yannal&trade;</span>
-          <ul class="hero__links">
-            <li>menu</li>
-            <li>about us</li>
-            <li>our specials</li>
-            <li>our locations</li>
-            <li>our chefs</li>
+        <nav class="nav">
+          <span class="nav__logo">yannal&trade;</span>
+          <ul class="nav__links">
+            <li><a href="#online_store">online store</a></li>
+            <li><a href="#popular_menu">popular menu</a></li>
+            <li><a href="#testimonials">testimonials</a></li>
           </ul>
-          <span class="hero__nav-logos">
+          <span class="nav__icons">
             <img src="/search.svg" alt="Search icon" />
             <img src="/basket.svg" alt="Basket icon" />
             <img src="/person.svg" alt="Person icon" />
@@ -27,52 +31,53 @@
         </nav>
 
         <!-- Hero text -->
-        <div class="hero__information">
-          <span class="pagination"></span>
+        <div class="hero">
           <div class="hero__text">
-            <h1 class="hero__heading">NOW TAKING ONLINE ORDERS</h1>
-            <span class="hero__sub-heading">
-              <h2>kababs</h2>
-              <p>$14.97</p>
-            </span>
-            <p class="hero__paragraph">
+            <p class="text__para">NOW TAKING ONLINE ORDERS</p>
+            <div class="text__heading">
+              <h1>kababs</h1>
+              <p>$4.97</p>
+            </div>
+            <p class="text__paragraph">
               Restaurant style Yoghurt Mint Sauce is delicious dip which is
               quick and easy to ... This is a standard Indian mint chutney
               served with poppadums along with mint and lemon.
             </p>
-            <div class="hero__btns">
-              <a href="#" class="hero__cart-btn"> Add To Cart</a>
-              <a href="#" class="hero__table-btn"> Book a Table</a>
-            </div>
 
-            <div class="hero__time-description">
-              <span class="hero__time">
-                <p>Lunch</p>
-                <p>1:00-03:00pm</p>
+            <div class="text__time-description">
+              <span class="time-description__time">
+                <p class="meal">Lunch</p>
+                <p class="time">1:00-03:00pm</p>
               </span>
-              <span class="hero__time">
-                <p>Dinner</p>
-                <p>7:00-10:00pm</p>
+              <span class="time-description__time">
+                <p class="meal">Dinner</p>
+                <p class="time">7:00-10:00pm</p>
               </span>
             </div>
           </div>
-        </div>
 
-        <!-- Hero image -->
-        <div class="hero__image">
-          <img
-            src="/chicken-shish-kebab-with-vegetables-isolated-top-view-copy-space 1.png"
-            alt="Chicken kebab with vegetables"
-          />
-          <img src="/image 32.png" alt="Mint leaf" />
-          <img src="/image 33.png" alt="Mint leaf" />
-          <img src="/image 34 (1).png" alt="Mint leaf" />
-          <img src="/image 34.png" alt="Mint leaf" />
-          <img src="/image 35.png" alt="Mint leaf" />
+          <!-- Hero image -->
+          <div class="hero__image">
+            <img
+              class="chicken-kebab"
+              src="/chicken-shish-kebab-with-vegetables-isolated-top-view-copy-space 1.png"
+              alt="Chicken kebab with vegetables"
+            />
+            <img src="/image 32.png" alt="Mint leaf" class="mint-leaf-1" />
+            <img src="/image 33.png" alt="Mint leaf" class="mint-leaf-2" />
+            <img src="/image 34 (1).png" alt="Mint leaf" class="mint-leaf-3" />
+            <img src="/image 33.png" alt="Mint leaf" class="mint-leaf-4" />
+            <img src="/image 35.png" alt="Mint leaf" class="mint-leaf-5" />
+            <img
+              src="./public/image 36.png"
+              alt="Mint leaf"
+              class="mint-leaf-6"
+            />
+          </div>
         </div>
       </header>
 
-      <section class="online_store">
+      <section class="online_store" id="online_store">
         <h2 class="online_store__heading">ONLINE STORE</h2>
         <p class="online_store__subheading">Popular Products</p>
         <div class="online_store__dishes">
@@ -151,7 +156,7 @@
         </div>
       </section>
 
-      <section class="popular_menu">
+      <section class="popular_menu" id="popular_menu">
         <h2 class="popular_menu__title">POPULAR MENU</h2>
         <p class="popular_menu__text">Amazing Food Served With Delicacy</p>
 
@@ -397,7 +402,7 @@
         </div>
       </section>
 
-      <section class="testimonials">
+      <section class="testimonials" id="testimonials">
         <h2 class="testimonials__title">TESTIMONIAL</h2>
         <div class="testimonials__subtitle">
           <h3 class="subtitle">What they saying</h3>
