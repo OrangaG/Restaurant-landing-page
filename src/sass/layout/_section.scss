@@ -71,3 +71,109 @@
     left: -8%;
   }
 }
+
+.delivery_items {
+  display: flex;
+  justify-content: center;
+}
+
+.delivery_items__info {
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+  background-color: c.$secondary-background-color;
+  padding: 5rem 4rem;
+  position: relative;
+  width: 70rem;
+  border-radius: 40px;
+
+  img {
+    max-width: 100%;
+  }
+
+  .info {
+    &__leaf {
+      position: absolute;
+      top: -5%;
+      rotate: 177deg;
+      right: 31%;
+      z-index: 10;
+    }
+
+    &__bread {
+      position: absolute;
+      z-index: 10;
+      left: -12%;
+      bottom: 10%;
+    }
+
+    &__text {
+      display: flex;
+      align-items: center;
+      line-height: 20px;
+      padding-left: 2rem;
+      border-radius: 40px;
+      border: 2px solid c.$tertiary-background-color;
+      background-color: c.$tertiary-background-color;
+      max-width: max-content;
+    }
+
+    &__cup {
+      position: absolute;
+      z-index: 10;
+      right: -15%;
+      bottom: -40%;
+      width: 35rem;
+      height: 35rem;
+    }
+
+    &__beans {
+      position: absolute;
+      mix-blend-mode: multiply;
+      bottom: 21%;
+      right: 15%;
+      rotate: 60deg;
+    }
+
+    &__heading {
+      color: c.$primary-color;
+      font-family: t.$secondary-font-family;
+      font-size: t.$font-size-7xl;
+      letter-spacing: -2.8px;
+      line-height: 85px;
+      font-weight: 800;
+      max-width: 700px;
+    }
+
+    &__para {
+      max-width: 500px;
+      font-size: t.$font-size-lg;
+      line-height: t.$line-height;
+    }
+
+    &__btn {
+      background-color: c.$secondary-color;
+      max-width: max-content;
+      color: c.$button-text-color;
+      padding: 1rem 0 1rem 2rem;
+      border-radius: 10px;
+      margin-top: 1rem;
+      z-index: 10;
+      position: relative;
+
+      &:after {
+        background-color: c.$secondary-color;
+        border-radius: 10px;
+        width: 4rem;
+        height: 100%;
+        content: "";
+        display: block;
+        position: absolute;
+        top: 0;
+        right: -36px;
+        transform: skewX(-14deg);
+        z-index: -1;
+      }
+    }
+  }
+}
