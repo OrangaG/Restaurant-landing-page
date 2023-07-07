@@ -1,5 +1,6 @@
 @use "../base/typography" as t;
 @use "../abstracts/colors" as c;
+@use "../abstracts/mixins" as m;
 
 .online_store {
   position: relative;
@@ -175,5 +176,88 @@
         z-index: -1;
       }
     }
+  }
+}
+
+.popular_menu {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  height: 1400px;
+  position: relative;
+
+  .menu__image {
+    width: 70%;
+  }
+
+  &__title {
+    font-size: t.$font-size-lg;
+  }
+
+  &__text {
+    text-align: center;
+    font-size: t.$font-size-7xl;
+    font-family: t.$secondary-font-family;
+    max-width: 800px;
+    letter-spacing: -6.4px;
+    font-weight: 800;
+    line-height: 100px;
+    color: c.$primary-color;
+  }
+
+  &__menus {
+    display: grid;
+    gap: 2rem;
+    grid-template-columns: repeat(3, 370px);
+    grid-template-rows: repeat(3, 450px);
+    margin-top: 3rem;
+  }
+
+  &__menu {
+    @include m.menu-container;
+  }
+
+  .dishim__menu {
+    @include m.menu-container;
+    .dishim-menu__detail {
+      display: flex;
+      justify-content: center;
+      margin-bottom: 78px;
+      #menu__image {
+        width: 48%;
+      }
+    }
+  }
+
+  .menu__detail {
+    display: flex;
+    justify-content: center;
+  }
+
+  .menu__info {
+    margin-top: -50px;
+
+    .menu__text {
+      line-height: t.$line-height-sm;
+      margin: 1rem 0 2rem 0;
+      letter-spacing: -0.16px;
+    }
+
+    .menu__price {
+      font-size: t.$font-size-lg;
+      font-weight: 500;
+    }
+  }
+
+  .mint-leaf-1 {
+    position: absolute;
+    top: 5%;
+    left: 0;
+  }
+
+  .mint-leaf-2 {
+    position: absolute;
+    top: 55%;
+    right: 4%;
   }
 }
