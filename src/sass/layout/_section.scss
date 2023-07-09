@@ -33,6 +33,7 @@
   &__dishes {
     display: flex;
     justify-content: center;
+    flex-wrap: wrap;
     margin-top: 8rem;
     img {
       max-width: 18rem;
@@ -82,6 +83,7 @@
   display: flex;
   flex-direction: column;
   gap: 2rem;
+  width: 80%;
   background-color: c.$secondary-background-color;
   padding: 5rem 4rem;
   position: relative;
@@ -183,7 +185,7 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  height: 1400px;
+  // height: 1400px;
   position: relative;
 
   .menu__image {
@@ -203,14 +205,6 @@
     font-weight: 800;
     line-height: 100px;
     color: c.$primary-color;
-  }
-
-  &__menus {
-    display: grid;
-    gap: 2rem;
-    grid-template-columns: repeat(3, 370px);
-    grid-template-rows: repeat(3, 450px);
-    margin-top: 3rem;
   }
 
   &__menu {
@@ -258,6 +252,178 @@
   .mint-leaf-2 {
     position: absolute;
     top: 55%;
-    right: 4%;
+    right: 7%;
+  }
+}
+
+.app {
+  display: flex;
+  justify-content: center;
+}
+
+.app__container {
+  display: flex;
+  gap: 14rem;
+  width: 80%;
+}
+
+.mobile_app {
+  position: relative;
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  height: 632px;
+  width: 360px;
+  border: 2px solid red;
+  padding: 1.2rem;
+  border-radius: 45px;
+  box-shadow: 10px 15px 58px 0px rgba(0, 0, 0, 0.11);
+
+  &__icons {
+    display: flex;
+    justify-content: space-between;
+
+    .cart-logo {
+      margin-right: -22px;
+    }
+  }
+
+  img {
+    max-width: 150px;
+  }
+}
+
+.product {
+  position: relative;
+  &__image {
+    position: absolute;
+    top: 0;
+    right: 0;
+  }
+  &__info {
+    display: flex;
+    flex-direction: column;
+    justify-content: flex-end;
+    height: 150px;
+    border-radius: 8px;
+    background: #fff;
+    box-shadow: 8px 8px 50px 0px rgba(234, 0, 37, 0.17);
+    padding: 0.9rem;
+    margin-top: 4rem;
+
+    .product__title {
+      font-size: t.$font-size-sm;
+      font-weight: 500;
+    }
+
+    .product__rating {
+      margin-left: -3.3rem;
+      height: 10px;
+    }
+  }
+
+  &__pricing {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 1rem;
+    margin-top: 2rem;
+    height: 14px;
+
+    .pricing {
+      font-weight: 500;
+    }
+
+    img {
+      margin-top: 6px;
+    }
+  }
+
+  &__rating {
+    margin-left: -2px;
+    height: 15px;
+  }
+}
+
+.sawaiyani__info {
+  h3 {
+    font-size: t.$font-size-lg;
+    font-weight: 500;
+  }
+  p {
+    font-weight: 500;
+    font-size: t.$font-size-sm;
+    margin-top: 1rem;
+  }
+}
+
+.mobile_app_footer {
+  display: flex;
+  justify-content: space-around;
+  margin-top: 2rem;
+  background-color: c.$secondary-background-color;
+  border-radius: 35px;
+  padding: 1rem;
+
+  img {
+    height: 1rem;
+  }
+}
+
+.footer__left_icons,
+.footer__right_icons {
+  display: flex;
+  justify-content: space-between;
+  gap: 1rem;
+}
+
+.icon {
+  font-size: t.$font-size-xs;
+  display: flex;
+  flex-direction: column;
+  gap: 5px;
+}
+
+.app__information {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  gap: 1rem;
+
+  .information__subheading {
+    font-size: t.$font-size-lg;
+    font-weight: 700;
+    letter-spacing: -0.8px;
+  }
+
+  .information__heading {
+    font-family: t.$secondary-font-family;
+    font-size: t.$font-size-4xl;
+    color: c.$primary-color;
+    letter-spacing: -4.96px;
+    line-height: 60px;
+    margin-bottom: 1rem;
+  }
+
+  .information__text {
+    font-size: t.$font-size-lg;
+    width: 481px;
+    margin-bottom: 3rem;
+  }
+
+  .information__store_btns {
+    display: flex;
+    gap: 4rem;
+  }
+}
+
+.mobile_app__leaf {
+  position: absolute;
+  bottom: -3%;
+  left: -10%;
+  rotate: 7deg;
+
+  .mint-leaf-small {
+    rotate: 13deg;
   }
 }
