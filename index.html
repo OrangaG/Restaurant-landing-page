@@ -11,6 +11,7 @@
     <link rel="stylesheet" href="./src/sass/styles.scss" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Yannal</title>
+    <script src="nav.js" defer></script>
   </head>
   <body>
     <div class="container">
@@ -18,26 +19,23 @@
         <!-- Navbar -->
         <nav class="nav">
           <span class="nav__logo">yannal&trade;</span>
-          <ul class="nav__links">
-            <li><a href="#online_store">online store</a></li>
-            <li><a href="#popular_menu">popular menu</a></li>
-            <li><a href="#testimonials">testimonials</a></li>
+
+          <button class="nav__mobile__toggle">
+            <img src="../../../menu.png" alt="menu icon" class="menu__icon" />
+          </button>
+          <ul class="nav__links" data-visible="false">
+            <li><a id="nav__link" href="#online_store">online store</a></li>
+            <li><a id="nav__link" href="#popular_menu">popular menu</a></li>
+            <li><a id="nav__link" href="#testimonials">testimonials</a></li>
           </ul>
-          <span class="nav__icons">
-            <img src="/search.svg" alt="Search icon" />
-            <img src="/basket.svg" alt="Basket icon" />
-            <img src="/person.svg" alt="Person icon" />
-          </span>
         </nav>
 
         <!-- Hero text -->
         <div class="hero">
           <div class="hero__text">
             <p class="text__para">NOW TAKING ONLINE ORDERS</p>
-            <div class="text__heading">
-              <h1>kababs</h1>
-              <p>$4.97</p>
-            </div>
+            <h1 class="text__heading">kababs</h1>
+            <span class="text__price">$4.97</span>
             <p class="text__paragraph">
               Restaurant style Yoghurt Mint Sauce is delicious dip which is
               quick and easy to ... This is a standard Indian mint chutney
@@ -58,17 +56,24 @@
 
           <!-- Hero image -->
           <div class="hero__image">
-            <img
-              class="chicken-kebab"
-              src="/chicken-shish-kebab-with-vegetables-isolated-top-view-copy-space 1.png"
-              alt="Chicken kebab with vegetables"
-            />
-            <img src="/image 32.png" alt="Mint leaf" class="mint-leaf-1" />
-            <img src="/image 33.png" alt="Mint leaf" class="mint-leaf-2" />
-            <img src="/image 34 (1).png" alt="Mint leaf" class="mint-leaf-3" />
-            <img src="/image 33.png" alt="Mint leaf" class="mint-leaf-4" />
-            <img src="/image 35.png" alt="Mint leaf" class="mint-leaf-5" />
-            <img src="/image 36.png" alt="Mint leaf" class="mint-leaf-6" />
+            <div class="kebab_image">
+              <img
+                class="chicken-kebab"
+                src="/chicken-shish-kebab-with-vegetables-isolated-top-view-copy-space 1.png"
+                alt="Chicken kebab with vegetables"
+              />
+
+              <img src="/image 32.png" alt="Mint leaf" class="mint-leaf-1" />
+              <img src="/image 33.png" alt="Mint leaf" class="mint-leaf-2" />
+              <img
+                src="/image 34 (1).png"
+                alt="Mint leaf"
+                class="mint-leaf-3"
+              />
+              <img src="/image 33.png" alt="Mint leaf" class="mint-leaf-4" />
+              <img src="/image 35.png" alt="Mint leaf" class="mint-leaf-5" />
+              <img src="/image 36.png" alt="Mint leaf" class="mint-leaf-6" />
+            </div>
           </div>
         </div>
       </header>
@@ -128,7 +133,7 @@
             <p>Faster Food Delivery Service</p>
             <img src="/delivery-man 1.svg" alt="delivery-man" />
           </div>
-          <h2 class="info__heading">Get delivered while it is still hot.</h2>
+          <h2 class="info__heading">Get delivered while it is hot.</h2>
           <p class="info__para">
             Bring together your discussions memberships and content. Start your
             7-day free trial.
@@ -137,7 +142,9 @@
           <div class="info__beans">
             <img src="/image 721.png" alt="coffee beans" />
           </div>
-          <img class="info__cup" src="/Dish.png" alt="a cup of coffee" />
+          <div class="info__cup">
+            <img src="/Dish.png" alt="a cup of coffee" />
+          </div>
         </div>
       </section>
 
@@ -146,13 +153,17 @@
         <p class="popular_menu__text">Amazing Food Served With Delicacy</p>
 
         <div class="popular_menu__menus">
-          <div class="dishim__menu">
-            <div class="dishim-menu__detail">
-              <img src="/Dish (5).png" alt="plate of dishim" id="menu__image" />
+          <div class="popular_menu__menu">
+            <div class="menu__detail">
+              <img
+                src="/Dish (10).png"
+                alt="plate of wings with fries"
+                class="menu__image"
+              />
             </div>
             <div class="menu__info">
               <img src="/Review.svg" alt="rating" class="menu__review" />
-              <h3 class="menu__title">Dishim with Fries and Sauce</h3>
+              <h3 class="menu__title">Spicy Wings with Fries and Sauce</h3>
               <p class="menu__text">
                 Lorem ipsum dolor sit amet consectetur adipisicing elit.
                 Pariatur dignissimos commodi magni?
@@ -356,9 +367,9 @@
               </div>
             </div>
             <div class="mobile_app__leaf">
-              <img src="./public/image 34.png" alt="mint leaf" />
+              <img src="/image 34.png" alt="mint leaf" />
               <img
-                src="./public/image 36.png"
+                src="/image 36.png"
                 alt="mint leaf "
                 class="mint-leaf-small"
               />
@@ -403,12 +414,8 @@
               <div class="testimonial__info">
                 <h4 class="info__name">Natasha Malik</h4>
                 <p class="info__location">California</p>
-                <img
-                  src="/Review.svg"
-                  alt="review icon"
-                  class="info__rating-1"
-                />
-                <p class="info__text">
+                <img src="/Review.svg" alt="review icon" class="info__rating" />
+                <p class="info__review">
                   "Him Rendered May Attended Concerns Jennings Reserved Now.
                   <span class="text--bold">Sympathize</span> Did Now Preference
                   Unpleasing Mrs Few.Mrs For
@@ -429,12 +436,8 @@
               <div class="testimonial__info">
                 <h4 class="info__name">AR Shakir</h4>
                 <p class="info__location">Arizona</p>
-                <img
-                  src="/Review.svg"
-                  alt="review icon"
-                  class="info__rating-2"
-                />
-                <p class="info__text">
+                <img src="/Review.svg" alt="review icon" class="info__rating" />
+                <p class="info__review">
                   "Out Believe Has Request Not How Comfort Evident. Up
                   <span class="text--bold">Delight Cousins</span> We Feeling
                   Minutes. Genius Has Looked End Piqued Spring. Down Has Rose
@@ -474,15 +477,14 @@
           <div class="footer__social_media">
             <p class="footer__logo">yannal&trade;</p>
             <div class="social_media">
-              <p>Facebook icon</p>
-              <p>Twitter icon</p>
+              <img src="/facebook-f .svg" alt="facebook icon" class="icon" />
               <img src="/instagram-icon.svg" alt="instagram icon" />
-              <p>LinkedIn icon</p>
+              <img src="/linkedin-in.svg" alt="linkedin icon" class="icon" />
             </div>
           </div>
 
           <div class="footer__contact">
-            <h3 class="footer__title">Contact</h3>
+            <h3 class="contact__title">Contact</h3>
             <div class="contact__location">
               <img
                 src="/Location.svg"
@@ -503,7 +505,7 @@
             </div>
           </div>
 
-          <div class="footer__links">
+          <div class="links_wrapper">
             <h3 class="footer__title">Support</h3>
             <a href="#" class="footer__link">Faq</a
             ><a href="#" class="footer__link">Shipping & Returns</a
@@ -511,7 +513,7 @@
             ><a href="#" class="footer__link">Our Partners</a>
           </div>
 
-          <div class="footer__links">
+          <div class="links_wrapper">
             <h3 class="footer__title">Info</h3>
             <a href="#" class="footer__link">Dates</a
             ><a href="#" class="footer__link">Parties</a

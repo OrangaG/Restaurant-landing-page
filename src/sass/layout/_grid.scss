@@ -3,8 +3,9 @@
 .popular_menu__menus {
   display: grid;
   width: 82%;
+  justify-content: center;
   gap: 2rem;
-  grid-template-columns: repeat(auto-fit, minmax(370px, 1fr));
+  grid-template-columns: repeat(auto-fit, minmax(350px, 1fr));
   grid-template-rows: minmax(450px, auto);
   margin: 2rem auto;
 }

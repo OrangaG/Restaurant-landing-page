@@ -1,0 +1,90 @@
+@use "../abstracts/colors" as c;
+@use "../base/typography" as t;
+
+footer {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 4rem;
+  background-color: c.$secondary-color;
+  color: c.$background-color;
+  margin-top: -11.5rem;
+  padding-top: 11.5rem;
+  padding-bottom: 1.5rem;
+}
+
+.footer {
+  width: 90%;
+  display: flex;
+  justify-content: space-around;
+
+  &__links {
+    display: flex;
+    flex-direction: column;
+    gap: 1rem;
+  }
+
+  @media screen and (max-width: 650px) {
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(11rem, 1fr));
+    gap: 2rem;
+  }
+
+  @media (min-width: 430px) and (max-width: 450px) {
+    gap: 0.5rem;
+  }
+}
+
+.footer__contact > div {
+  display: flex;
+  gap: 1rem;
+  line-height: t.$line-height-sm;
+}
+
+.footer__logo {
+  font-size: t.$font-size-2xxl;
+  font-weight: 700;
+}
+
+.social_media {
+  display: flex;
+  gap: 1rem;
+  margin-top: 1rem;
+  .icon {
+    width: 20px;
+    height: 16px;
+  }
+}
+
+.footer__contact {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.footer__title,
+.contact__title {
+  font-size: t.$font-size-2xl;
+}
+.location__info {
+  width: 13.75rem;
+}
+
+.footer__links {
+  display: flex;
+  flex-direction: row;
+}
+
+.links_wrapper {
+  display: flex;
+  flex-direction: column;
+  gap: 1rem;
+}
+
+.footer__link {
+  color: c.$background-color;
+
+  &:hover {
+    text-decoration: underline;
+  }
+}

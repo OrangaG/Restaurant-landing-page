@@ -2,103 +2,182 @@
 @use "../abstracts/colors" as c;
 
 header {
-  height: 100vh;
+  min-height: 100vh;
+  padding-inline: 2rem;
+  margin-bottom: 10rem;
+
+  @media screen and (max-width: 650px) {
+    margin-bottom: 5em;
+  }
 }
 
 .hero {
   display: flex;
-  height: 100%;
+  min-height: 100%;
+
+  @media screen and (max-width: 1200px) {
+    flex-direction: column;
+    gap: 5rem;
+  }
+
   &__text {
+    position: relative;
     display: flex;
+    width: 30%;
     flex-direction: column;
     justify-content: center;
     z-index: 10;
+
+    @media screen and (max-width: 1200px) {
+      width: 80%;
+      margin-inline: auto;
+      text-align: center;
+      z-index: 1;
+    }
+
+    .text__price {
+      position: absolute;
+      top: 13%;
+      right: -17rem;
+      color: c.$secondary-text-color;
+      rotate: 270deg;
+      font-size: clamp(2rem, 5vw, 5rem);
+      font-weight: 700;
+      line-height: 100px;
+      letter-spacing: -3.12px;
+      opacity: 0.1;
+
+      @media screen and (max-width: 1200px) {
+        position: relative;
+        rotate: 0deg;
+        font-size: clamp(3rem, 7vw, 6rem);
+        left: 0;
+        margin-block: -1rem;
+        padding-bottom: 0.5em;
+      }
+    }
   }
 
   &__image {
     width: 70%;
     position: relative;
 
-    .chicken-kebab {
-      position: absolute;
-      right: 0;
-      bottom: 10%;
-      width: 150%;
+    @media screen and (max-width: 1200px) {
+      width: 100%;
     }
 
-    %position {
+    img {
+      max-width: 100%;
+      display: block;
+    }
+
+    .kebab_image {
       position: absolute;
-      z-index: 10;
+      right: 18%;
+      top: -21%;
+      width: 100%;
+
+      @media screen and (max-width: 1200px) {
+        position: relative;
+      }
+      @media screen and (max-width: 850px) {
+        width: 110%;
+      }
+      @media screen and (max-width: 650px) {
+        width: 125%;
+        right: 30%;
+      }
     }
 
     .mint-leaf-1 {
-      @extend %position;
-      top: 10%;
-      left: 35%;
+      position: absolute;
+      top: 20%;
+      left: 55%;
     }
     .mint-leaf-2 {
-      @extend %position;
-      bottom: 32%;
-      right: 15%;
+      position: absolute;
+      bottom: 20%;
+      right: 5%;
     }
     .mint-leaf-3 {
-      @extend %position;
-      bottom: 20%;
-      left: 0;
+      position: absolute;
+      bottom: 21%;
+      left: 21%;
     }
     .mint-leaf-4 {
-      @extend %position;
-      bottom: 3%;
-      left: 30%;
+      position: absolute;
+      bottom: -8%;
+      left: 50%;
     }
     .mint-leaf-5 {
-      @extend %position;
-      bottom: 15%;
-      right: -6%;
+      position: absolute;
+      bottom: -7%;
+      right: -7%;
     }
     .mint-leaf-6 {
-      @extend %position;
-      top: 15%;
-      right: 4%;
+      position: absolute;
+      top: 25%;
+      right: 3%;
+    }
+
+    @media screen and (max-width: 600px) {
+      .chicken-kebab {
+        width: 135%;
+        right: 40%;
+
+        & ~ img {
+          display: none;
+        }
+      }
     }
   }
 }
 
 .text {
   &__para {
-    font-size: t.$font-size-md;
+    font-size: clamp(1rem, 1vw, 8rem);
     color: c.$primary-color;
   }
 
   &__heading {
-    display: flex;
-    font-size: t.$font-size-7xl;
     color: c.$primary-color;
     font-family: t.$secondary-font-family;
+    font-size: clamp(6rem, 18vw, 12rem);
     letter-spacing: -14.56px;
+    text-align: center;
 
-    p {
-      color: c.$secondary-text-color;
-      rotate: 270deg;
-      margin-left: 20px;
-      font-weight: 700;
-      line-height: 100px;
-      letter-spacing: -3.12px;
-
-      opacity: 0.1;
+    @media screen and (max-width: 800px) {
+      letter-spacing: -7.56px;
     }
   }
 
   &__paragraph {
-    font-size: t.$font-size-lg;
+    font-size: clamp(1rem, 1.1vw, t.$font-size-lg);
     max-width: 476px;
     line-height: t.$line-height;
-    margin-bottom: 100px;
+    padding-bottom: clamp(2rem, 8vw, 8rem);
+
+    @media screen and (max-width: 1200px) {
+      margin-inline: auto;
+      font-size: clamp(1rem, 1.7vw, 1.25rem);
+      padding-bottom: 0;
+      margin-bottom: 6rem;
+    }
   }
 
   &__time-description {
     display: flex;
     gap: 7rem;
+
+    @media screen and (max-width: 1200px) {
+      justify-content: space-around;
+      gap: 0;
+    }
+
+    @media screen and (max-width: 450px) {
+      flex-direction: column;
+      gap: 2rem;
+    }
 
     .meal {
       font-weight: 700;

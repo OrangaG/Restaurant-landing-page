@@ -6,7 +6,36 @@
   justify-content: space-between;
   align-items: center;
   font-weight: 500;
-  z-index: 10;
+  padding: 2rem 0 4rem 0;
+  z-index: 50;
+
+  img {
+    width: 100%;
+  }
+
+  @media screen and (max-width: 1200px) {
+    padding: 2rem 0;
+  }
+
+  .nav__mobile__toggle {
+    display: none;
+  }
+
+  @media screen and (max-width: 650px) {
+    .nav__mobile__toggle {
+      display: block;
+      position: fixed;
+      top: 2rem;
+      right: 1rem;
+      z-index: 100;
+      background-color: transparent;
+      background-repeat: no-repeat;
+      width: 2rem;
+      aspect-ratio: 1;
+      border: 0;
+      cursor: pointer;
+    }
+  }
 }
 
 .nav__logo {
@@ -16,25 +45,47 @@
 .nav__links {
   display: flex;
   gap: 2.625rem;
-  z-index: inherit;
-}
+  z-index: 2;
 
-li {
-  a {
-    &:visited,
-    &:focus {
-      color: a.$secondary-color;
+  @media screen and (max-width: 650px) {
+    position: fixed;
+    inset: 0 0 0 40%;
+    padding: Min(20vh, 10rem) 3em;
+    transform: translateX(100%);
+    transition: transform 350ms ease-out;
+
+    flex-direction: column;
+    align-items: center;
+    font-size: t.$font-size-lg;
+    background: #777;
+    gap: 3rem;
+    z-index: 50;
+
+    &[data-visible="true"] {
+      transform: translateX(0%);
     }
 
-    &:hover,
-    &:active {
-      color: a.$primary-color;
+    li {
+      #nav__link {
+        color: #fff;
+
+        &:hover {
+          color: a.$primary-color;
+        }
+      }
     }
   }
-}
 
-.nav__icons {
-  z-index: inherit;
-  display: flex;
-  gap: 1.625rem;
+  li {
+    a {
+      &:visited,
+      &:focus {
+        color: a.$secondary-color;
+      }
+
+      &:hover {
+        color: a.$primary-color;
+      }
+    }
+  }
 }

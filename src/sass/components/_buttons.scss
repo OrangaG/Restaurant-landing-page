@@ -1,0 +1,54 @@
+@use "../base/typography" as t;
+@use "../abstracts/colors" as c;
+
+.info__btn {
+  background-color: c.$secondary-color;
+  max-width: max-content;
+  color: c.$button-text-color;
+  padding: 1rem 0 1rem 2rem;
+  border-radius: 10px;
+  margin-top: 1rem;
+  z-index: 10;
+  position: relative;
+
+  &:after {
+    background-color: c.$secondary-color;
+    border-radius: 10px;
+    width: 4rem;
+    height: 100%;
+    content: "";
+    display: block;
+    position: absolute;
+    top: 0;
+    right: -36px;
+    transform: skewX(-14deg);
+    z-index: -1;
+  }
+}
+
+.subscription__btn {
+  font-size: t.$font-size-lg;
+  font-weight: 500;
+  background-color: c.$primary-color;
+  color: c.$button-text-color;
+  padding: 1em 2em;
+  border-radius: 47px;
+  cursor: pointer;
+
+  &:hover {
+    background-color: c.$primary-color-light;
+  }
+
+  @media screen and (max-width: 700px) {
+    padding: 0.5em 1em;
+  }
+
+  @media screen and (max-width: 600px) {
+    width: 80%;
+  }
+
+  @media screen and (max-width: 450px) {
+    font-size: t.$font-size-sm;
+    padding: 0.5em;
+  }
+}

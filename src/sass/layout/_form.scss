@@ -1,0 +1,30 @@
+@use "../abstracts/colors" as c;
+@use "../base/typography" as t;
+.subscription__form {
+  width: 28.125rem;
+  border: 2px solid c.$primary-color;
+  border-radius: 47px;
+  display: flex;
+  justify-content: space-between;
+  padding: 0.5rem 0.5rem 0.5rem 2rem;
+
+  @media screen and (max-width: 700px) {
+    width: 100%;
+    padding: 0.25rem 0.25rem 0.25rem 1rem;
+  }
+
+  @media screen and (max-width: 600px) {
+    flex-direction: column;
+    align-items: center;
+    gap: 2rem;
+    padding: 1rem;
+    border-radius: 21px;
+  }
+
+  @media screen and (max-width: 450px) {
+    input {
+      font-size: t.$font-size-xs;
+      text-align: center;
+    }
+  }
+}
