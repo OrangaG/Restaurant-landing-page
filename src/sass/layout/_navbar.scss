@@ -56,7 +56,7 @@
 
     flex-direction: column;
     align-items: center;
-    font-size: t.$font-size-lg;
+    font-size: t.$font-size-md;
     background: #777;
     gap: 3rem;
     z-index: 50;
@@ -72,19 +72,6 @@
         &:hover {
           color: a.$primary-color;
         }
-      }
-    }
-  }
-
-  li {
-    a {
-      &:visited,
-      &:focus {
-        color: a.$secondary-color;
-      }
-
-      &:hover {
-        color: a.$primary-color;
       }
     }
   }

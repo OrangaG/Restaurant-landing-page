@@ -1,6 +1,9 @@
+@use "../abstracts/colors" as a;
+
 a {
   text-decoration: none;
   cursor: pointer;
+  color: a.$secondary-color;
 }
 
 li {
